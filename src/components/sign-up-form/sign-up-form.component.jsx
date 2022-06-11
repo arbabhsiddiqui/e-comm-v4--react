@@ -1,5 +1,4 @@
-import { async } from "@firebase/util";
-import { useState, useEffect, Fragment } from "react";
+import { useState } from "react";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,

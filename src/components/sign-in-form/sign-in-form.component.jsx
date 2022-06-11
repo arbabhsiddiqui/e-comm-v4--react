@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
@@ -34,7 +34,6 @@ const SignInForm = () => {
         email,
         password
       );
-      console.log(user);
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
@@ -52,8 +51,7 @@ const SignInForm = () => {
   };
 
   const sigInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   return (
