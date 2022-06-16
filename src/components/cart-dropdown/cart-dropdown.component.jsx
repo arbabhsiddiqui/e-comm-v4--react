@@ -22,9 +22,8 @@ const CartDropdown = () => {
 
   return (
     <CartDropdownContainer>
-      {cartItems ? " " : '<p className="empty-message">No Item Found</p>'}
       <CartItems>
-        {cartItems.length ? (
+        {cartItems && cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
         ) : (
           <EmptyMessage>Your cart is empty</EmptyMessage>
