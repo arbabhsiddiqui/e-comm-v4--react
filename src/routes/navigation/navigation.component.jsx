@@ -18,7 +18,7 @@ import {
 import { selectCurrentUser } from "../../store/user/user.selector";
 
 const Navigation = () => {
-  const currentUser = useSelector((state) => selectCurrentUser(state));
+  const currentUser = useSelector(selectCurrentUser);
 
   const { isCartOpen } = useContext(CartContext);
 
